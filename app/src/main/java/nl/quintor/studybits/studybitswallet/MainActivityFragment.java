@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 /**
  * A placeholder fragment containing a simple view.
+ * Test
  */
 public class MainActivityFragment extends Fragment {
 

@@ -31,8 +31,11 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
     public CredentialRecyclerViewAdapter(List<CredentialOrOffer> items, OnListFragmentInteractionListener listener) {
         credentials = items;
         credentialInteractionListener = listener;
-    }
 
+    }
+    public void Test() {
+
+    }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
