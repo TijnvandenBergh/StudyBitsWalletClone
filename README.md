@@ -1,5 +1,8 @@
 # StudyBitsWallet
 
+[![CircleCI](https://circleci.com/gh/tijn167/StudyBitsWalletClone/tree/master.svg?style=svg)](https://circleci.com/gh/tijn167/StudyBitsWalletClone/tree/master) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=tijn167_StudyBitsWalletClone&metric=bugs)](https://sonarcloud.io/dashboard?id=tijn167_StudyBitsWalletClone) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=tijn167_StudyBitsWalletClone&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=tijn167_StudyBitsWalletClone)
+
+
 Android Wallet application for the StudyBits project. This allows students to receive and prove their credentials.
 
 Works in conjunction with the [StudyBits Agent](https://github.com/Quintor/StudyBits)
