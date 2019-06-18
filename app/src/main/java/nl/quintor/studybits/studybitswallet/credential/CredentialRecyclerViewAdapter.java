@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -80,7 +81,14 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
             //Settings the grades and textview
             holder.mResultsView.setVisibility(View.VISIBLE);
             holder.mResultsView.setPaintFlags(holder.mResultsView.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+            holder.mExpandableTextView.setVisibility(View.VISIBLE);
             holder.mExpandableTextView.setText(credential.get("courses"));
+
+
+            holder.mDisplayDiplomaTypeLayout.setVisibility(View.VISIBLE);
+            holder.mDisplayDiplomaLayout.setVisibility(View.VISIBLE);
+            holder.mDisplayNameLayout.setVisibility(View.VISIBLE);
+            holder.mDisplayDateLayout.setVisibility(View.VISIBLE);
 
              if (holder.mContentView.getText().length   () == 0) {
                  holder.mContentView.setVisibility(View.GONE);
@@ -151,6 +159,14 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
 
         public final ExpandableTextView mExpandableTextView;
         public final ImageView mProvenImageView;
+
+        //Getting the linearlayouts
+        public final LinearLayout mDisplayDiplomaTypeLayout;
+        public final LinearLayout mDisplayDiplomaLayout;
+        public final LinearLayout mDisplayNameLayout;
+        public final LinearLayout mDisplayDateLayout;
+        public final LinearLayout mDisplayECLayout;
+
         public CredentialOrOffer credentialOffer;
 
         public ViewHolder(View view) {
@@ -169,8 +185,15 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
             mTypeView = (TextView) view.findViewById(R.id.typeView);
             mTypeDisplayView = (TextView) view.findViewById(R.id.typeDisplayView);
             mResultsView = (TextView) view.findViewById(R.id.resultsTextView);
-            mExpandableTextView = (ExpandableTextView) view.findViewById(R.id.lorem_ipsum);
+            mExpandableTextView = (ExpandableTextView) view.findViewById(R.id.resultsExpandedView);
             mProvenImageView = (ImageView) view.findViewById(R.id.provenImageView);
+
+            //Layouts
+            mDisplayDiplomaTypeLayout = (LinearLayout) view.findViewById(R.id.displayDiplomaTypeLayout);
+            mDisplayDiplomaLayout = (LinearLayout) view.findViewById(R.id.displayDiplomaLayout);
+            mDisplayNameLayout = (LinearLayout) view.findViewById(R.id.displayNameLayout);
+            mDisplayDateLayout = (LinearLayout) view.findViewById(R.id.displayDateLayout);
+            mDisplayECLayout = (LinearLayout) view.findViewById(R.id.displayEClayout);
 
         }
 
