@@ -65,7 +65,7 @@ public class ScenarioTest {
                 .perform(click());
         Log.d("STUDYBITS", "Clicked reset");
 
-        onView(allOf(withId(android.support.design.R.id.snackbar_text), withText("Successfully reset")))
+        onView(allOf(withId(com.google.android.material.R.id.snackbar_text), withText("Successfully reset")))
                 .check(matches(isDisplayed()));
 
         Log.d("STUDYBITS", "Successfully reset");
@@ -149,7 +149,7 @@ public class ScenarioTest {
                 .perform(click());
 
         // Check result
-        onView(allOf(withId(android.support.design.R.id.snackbar_text), withText("You're going abroad!")))
+        onView(allOf(withId(com.google.android.material.R.id.snackbar_text), withText("You're going abroad!")))
                 .check(matches(isDisplayed()));
     }
 }
