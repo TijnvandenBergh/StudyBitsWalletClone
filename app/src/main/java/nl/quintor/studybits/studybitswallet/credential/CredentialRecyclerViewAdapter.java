@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 
 import nl.quintor.studybits.indy.wrapper.dto.CredentialOffer;
 import nl.quintor.studybits.studybitswallet.ExpandableTextView;
+import nl.quintor.studybits.studybitswallet.Predictor;
 import nl.quintor.studybits.studybitswallet.R;
 import nl.quintor.studybits.studybitswallet.credential.CredentialFragment.OnListFragmentInteractionListener;
 
@@ -28,15 +29,14 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
 
     private List<CredentialOrOffer> credentials;
     private final OnListFragmentInteractionListener credentialInteractionListener;
+    private Predictor predictor = new Predictor();
 
     public CredentialRecyclerViewAdapter(List<CredentialOrOffer> items, OnListFragmentInteractionListener listener) {
         credentials = items;
         credentialInteractionListener = listener;
 
     }
-    public void Test() {
 
-    }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
@@ -101,6 +101,7 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
 //            holder.mContentView.setText(text);
         }
         else {
+            predictor.credentialToReadable(holder.credentialOffer.getValue());
             holder.mContentView.setText(holder.credentialOffer.getValue());
         }
 
