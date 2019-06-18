@@ -19,6 +19,8 @@
             android:id="@+id/student_id_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/account_user_5"
+            android:drawablePadding="10dp"
            />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -29,10 +31,13 @@
         android:hint="Password"
         app:endIconMode="password_toggle">
         <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/password_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"/>
+            android:id="@+id/password_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/account_password_5"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>

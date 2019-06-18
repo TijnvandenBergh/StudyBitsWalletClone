@@ -4,10 +4,11 @@ import android.util.Log;
 
 public class Predictor {
 
-    public String credentialToReadable(String crendentialValue) {
+    public boolean credentialToReadable(String crendentialValue) {
         if(crendentialValue.contains("Transcript")) {
             Log.e("TranscriptValue", crendentialValue);
+            return true;
         }
-        return crendentialValue;
+        return false;
     }
 }

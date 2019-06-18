@@ -100,8 +100,13 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
 //            holder.mContentView.setText(text);
         }
         else {
-            predictor.credentialToReadable(holder.credentialOffer.getValue());
-            holder.mContentView.setText(holder.credentialOffer.getValue());
+
+            if(predictor.credentialToReadable(holder.credentialOffer.getValue())) {
+                holder.mContentView.setText("Mogelijk een diploma van " + holder.credentialOffer.getUniversityName());
+            }
+            else{
+                holder.mContentView.setText("Kon geen voorspelling over claim doen");
+            }
         }
 
 
