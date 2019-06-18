@@ -1,16 +1,12 @@
 package nl.quintor.studybits.studybitswallet;
 
-import android.os.Message;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 
 import org.apache.commons.io.IOUtils;
 import org.hyperledger.indy.sdk.IndyException;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.CookieHandler;
@@ -19,25 +15,19 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.AccessDeniedException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-import nl.quintor.studybits.indy.wrapper.IndyWallet;
 import nl.quintor.studybits.indy.wrapper.dto.ConnectionRequest;
 import nl.quintor.studybits.indy.wrapper.dto.ConnectionResponse;
 import nl.quintor.studybits.indy.wrapper.dto.CredentialOffer;
 import nl.quintor.studybits.indy.wrapper.dto.CredentialOfferList;
-import nl.quintor.studybits.indy.wrapper.dto.CredentialWithRequest;
 import nl.quintor.studybits.indy.wrapper.message.IndyMessageTypes;
 import nl.quintor.studybits.indy.wrapper.message.MessageEnvelope;
 import nl.quintor.studybits.indy.wrapper.message.MessageEnvelopeCodec;
 import nl.quintor.studybits.indy.wrapper.message.MessageType;
-import nl.quintor.studybits.indy.wrapper.message.MessageTypes;
-import nl.quintor.studybits.indy.wrapper.util.JSONUtil;
 import nl.quintor.studybits.studybitswallet.exchangeposition.AuthcryptableExchangePositions;
 import nl.quintor.studybits.studybitswallet.exchangeposition.ExchangePosition;
 import nl.quintor.studybits.studybitswallet.room.entity.University;

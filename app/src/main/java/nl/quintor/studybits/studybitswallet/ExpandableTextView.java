@@ -7,7 +7,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
-public class ExpandableTextView extends android.support.v7.widget.AppCompatTextView {
+public class ExpandableTextView extends androidx.appcompat.widget.AppCompatTextView {
     private static final int DEFAULT_TRIM_LENGTH = 40;
     private static final String ELLIPSIS = ".....";
 

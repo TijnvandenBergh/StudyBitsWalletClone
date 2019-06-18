@@ -1,11 +1,11 @@
 package nl.quintor.studybits.studybitswallet.credential;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.support.annotation.NonNull;
-import android.util.Base64;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.annotation.NonNull;
+
 import android.util.Log;
 
 import org.hyperledger.indy.sdk.IndyException;
@@ -21,14 +21,8 @@ import nl.quintor.studybits.indy.wrapper.Prover;
 
 import nl.quintor.studybits.indy.wrapper.dto.CredentialInfo;
 import nl.quintor.studybits.indy.wrapper.dto.CredentialOffer;
-import nl.quintor.studybits.indy.wrapper.message.MessageEnvelope;
 import nl.quintor.studybits.indy.wrapper.message.MessageEnvelopeCodec;
-import nl.quintor.studybits.indy.wrapper.util.AsyncUtil;
 import nl.quintor.studybits.studybitswallet.AgentClient;
-import nl.quintor.studybits.studybitswallet.IndyClient;
-import nl.quintor.studybits.studybitswallet.MainActivity;
-import nl.quintor.studybits.studybitswallet.WalletActivity;
-import nl.quintor.studybits.studybitswallet.room.AppDatabase;
 import nl.quintor.studybits.studybitswallet.room.entity.University;
 
 import static nl.quintor.studybits.studybitswallet.TestConfiguration.STUDENT_SECRET_NAME;

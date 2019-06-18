@@ -1,10 +1,9 @@
 package nl.quintor.studybits.studybitswallet.credential;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-import nl.quintor.studybits.indy.wrapper.IndyWallet;
 import nl.quintor.studybits.studybitswallet.R;
 
 public class CredentialActivity extends AppCompatActivity  implements CredentialFragment.OnListFragmentInteractionListener {

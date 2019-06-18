@@ -1,6 +1,6 @@
 package nl.quintor.studybits.studybitswallet;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
 import com.fasterxml.jackson.core.JsonProcessingException;

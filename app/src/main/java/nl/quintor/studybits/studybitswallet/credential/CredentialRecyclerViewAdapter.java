@@ -1,8 +1,8 @@
 package nl.quintor.studybits.studybitswallet.credential;
 
 import android.graphics.Paint;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.RecyclerView;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import nl.quintor.studybits.indy.wrapper.dto.CredentialOffer;
 import nl.quintor.studybits.studybitswallet.ExpandableTextView;

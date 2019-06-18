@@ -1,17 +1,12 @@
 package nl.quintor.studybits.studybitswallet.room;
 
-import android.app.Activity;
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.Room;
-import android.arch.persistence.room.RoomDatabase;
+import androidx.room.Database;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import java.lang.ref.WeakReference;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 import nl.quintor.studybits.studybitswallet.room.entity.University;
 
