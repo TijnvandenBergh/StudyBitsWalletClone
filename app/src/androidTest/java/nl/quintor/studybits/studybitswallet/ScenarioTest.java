@@ -111,7 +111,7 @@ public class ScenarioTest {
 //        Log.e("MARCO", "En hier");
 
        // Accept credential
-        onView(withId(2131230775)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
+        onView(withId(R.id.credential_fragment)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
 
         // Launch connection dialog
         intent = new Intent();
