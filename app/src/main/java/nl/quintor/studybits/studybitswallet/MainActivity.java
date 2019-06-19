@@ -49,9 +49,10 @@ import nl.quintor.studybits.studybitswallet.university.UniversityActivity;
 
 
 public class MainActivity extends AppCompatActivity {
+    private static final String STUDYBITS = "STUDYBITS";
 
     static {
-        Log.d("STUDYBITS", "ENDPOINT IP: " + TestConfiguration.ENDPOINT_IP);
+        Log.d(STUDYBITS, "ENDPOINT IP: " + TestConfiguration.ENDPOINT_IP);
         Log.d("STUDYBITS", "Attempting to load indy");
         System.loadLibrary("indy");
         Log.d("STUDYBITS", "Loaded indy");

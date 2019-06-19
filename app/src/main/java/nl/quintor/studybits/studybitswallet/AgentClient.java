@@ -86,7 +86,6 @@ public class AgentClient {
         }
         catch (IOException e) {
             Log.e("STUDYBITS", "Exception when logging in" + e.getMessage());
-            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
