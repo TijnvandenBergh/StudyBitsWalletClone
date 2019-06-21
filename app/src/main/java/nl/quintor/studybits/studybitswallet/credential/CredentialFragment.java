@@ -182,7 +182,6 @@ public class CredentialFragment extends Fragment {
                 .map(credential -> {
                     Log.d("STUDYBITS", "Credential Referent" + credential.getReferent());
                     return endpoints.stream()
-                            .filter(u -> credential.getCredDefId().equals(u.getCredDefId()))
                             .map(u -> CredentialOrOffer.fromCredential(u, credential))
                             .limit(1);
                 })
