@@ -1,5 +1,6 @@
 package nl.quintor.studybits.studybitswallet.credential;
 
+import android.content.Intent;
 import android.graphics.Paint;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,9 +8,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 import java.util.Map;
@@ -19,6 +23,8 @@ import nl.quintor.studybits.studybitswallet.ExpandableTextView;
 import nl.quintor.studybits.studybitswallet.Predictor;
 import nl.quintor.studybits.studybitswallet.R;
 import nl.quintor.studybits.studybitswallet.credential.CredentialFragment.OnListFragmentInteractionListener;
+
+import static android.app.PendingIntent.getActivity;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link CredentialOffer} and makes a call to the
@@ -101,12 +107,7 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
         }
         else {
 
-            if(predictor.credentialToReadable(holder.credentialOffer.getValue())) {
-                holder.mContentView.setText("Mogelijk een diploma van " + holder.credentialOffer.getUniversityName());
-            }
-            else{
-                holder.mContentView.setText("Kon geen voorspelling over claim doen");
-            }
+                holder.mContentView.setText(holder.credentialOffer.getValue());
         }
 
 
@@ -124,6 +125,14 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
                     credentialInteractionListener.onListFragmentInteraction(holder.credentialOffer);
 
                 }
+            }
+        });
+
+        holder.mExpandImageButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
@@ -172,6 +181,9 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
         public final LinearLayout mDisplayDateLayout;
         public final LinearLayout mDisplayECLayout;
 
+        //Imagebutton for expand alertbox
+        public final ImageButton mExpandImageButton;
+
         public CredentialOrOffer credentialOffer;
 
         public ViewHolder(View view) {
@@ -192,6 +204,9 @@ public class CredentialRecyclerViewAdapter extends RecyclerView.Adapter<Credenti
             mResultsView = (TextView) view.findViewById(R.id.resultsTextView);
             mExpandableTextView = (ExpandableTextView) view.findViewById(R.id.resultsExpandedView);
             mProvenImageView = (ImageView) view.findViewById(R.id.provenImageView);
+
+            //ImageButton
+            mExpandImageButton = (ImageButton) view.findViewById(R.id.expandTranscriptButton);
 
             //Layouts
             mDisplayDiplomaTypeLayout = (LinearLayout) view.findViewById(R.id.displayDiplomaTypeLayout);
